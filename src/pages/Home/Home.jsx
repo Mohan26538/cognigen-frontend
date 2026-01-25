@@ -5,6 +5,7 @@ import { MdDashboard } from "react-icons/md";
 import { IoIosSettings } from "react-icons/io";
 import { IoIosLogOut } from "react-icons/io";
 import { SiGreatlearning } from "react-icons/si";
+import Dashboard from "./Dashboard";
 
 function Home() {
   const [activeMenu, setActiveMenu] = useState("Dashboard");
@@ -29,7 +30,7 @@ function Home() {
   const renderContent = () => {
     switch (activeMenu) {
       case "Dashboard":
-        return <h1 className="text-xl font-bold">Dashboard Content</h1>;
+        return <Dashboard />;
       case "Leaderboard":
         return <h1 className="text-xl font-bold">Leaderboard Content</h1>;
       case "Settings":
