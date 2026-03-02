@@ -8,6 +8,7 @@ import Home from "./pages/Home/Home";
 import LandingPage from "./pages/Landing/LandingPage";
 import LearningResources from "./pages/Learning/LearningResources";
 import LearningPathDetail from "./pages/Learning/LearningPathDetail";
+import NotebookPage from "./pages/Learning/NotebookPage";
 import Assessment from "./components/assesment/Assesment";
 import MockInterviewLanguageSelection from "./components/mockInterview/MockInterviewLanguageSelection";
 import MockInterviewSession from "./components/mockInterview/MockInterviewSession"
@@ -35,6 +36,10 @@ function App() {
           <Route path="/mock-interview" element={<MockInterviewLanguageSelection />} />
           <Route path="/mock-interview/session" element={<MockInterviewSession />}/>
 
+          <Route
+            path="/learning-resources/:pathId/notebook/:topicId"
+            element={<NotebookPage />}
+          />
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
